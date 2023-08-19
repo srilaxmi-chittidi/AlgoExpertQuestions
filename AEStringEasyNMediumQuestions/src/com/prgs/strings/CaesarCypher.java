@@ -3,9 +3,9 @@ package com.prgs.strings;
 public class CaesarCypher {
 
 	public static void main(String[] args) {
-		System.out.println(caesarCypherEncryptor("abc",2));
-		System.out.println(caesarCypherEncryptor("yza",2));
-		System.out.println(caesarCypherEncryptor("xyz",2));
+		System.out.println(caesarCypherEncryptor("abc",2)); //cde
+		System.out.println(caesarCypherEncryptor("yza",2)); //abc
+		System.out.println(caesarCypherEncryptor("xyz",2)); //zab
 	}
 	
 	public static String caesarCypherEncryptor(String str,int key) {

@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class GenerateDoc {
 
 	public static void main(String[] args) {
-		System.out.println(generateDoc("Bste!hetsi ogEAxpelrt x ","AlgoExpert is the Best!"));
+	//	System.out.println(generateDoc("Bste!hetsi ogEAxpelrt x ","AlgoExpert is the Best!"));
 		System.out.println(generateDocument("Bste!hetsi ogEAxpelrt x ","AlgoExpert is the Best!"));
 	}
 
@@ -31,7 +31,7 @@ public class GenerateDoc {
 	
 		for(char c : document.toCharArray()) {
 			if(!map.containsKey(c) || map.get(c) == 0) return false;
-			map.put(c, map.get(c)-1);
+		//	map.put(c, map.get(c)-1);
 		}
 		return true;
 	}
