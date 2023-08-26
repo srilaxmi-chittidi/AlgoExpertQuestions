@@ -13,8 +13,10 @@ public class CaesarCypher {
 		int size = str.length();
 		for(int i=0;i<size;i++) {
 			int ascii = str.charAt(i)+(key%26);
-			if(ascii > 'z') 
+			if(ascii > 'z') {
 				ascii = ascii-26;
+				System.out.println((char)ascii);
+			}
 			sb.append((char)ascii);
 		}
 		return sb.toString();

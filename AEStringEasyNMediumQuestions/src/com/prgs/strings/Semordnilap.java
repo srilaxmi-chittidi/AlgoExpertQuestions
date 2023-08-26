@@ -2,6 +2,7 @@ package com.prgs.strings;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Semordnilap {
@@ -10,13 +11,13 @@ public class Semordnilap {
 		System.out.println(getSemordnilapPairs(new String[]{"dog", "god"}));
 	}
 
-	public static ArrayList<ArrayList<String>> getSemordnilapPairs(String[] words) {
+	public static List<List<String>> getSemordnilapPairs(String[] words) {
 		Set<String> wordSet = new HashSet<>();
-		ArrayList<ArrayList<String>> results = new ArrayList<>();
+		List<List<String>> results = new ArrayList<>();
 		for(String word : words) {
 			String reverse = new StringBuilder(word).reverse().toString();
 			if(wordSet.contains(reverse)) {
-				ArrayList<String> list = new ArrayList<>();
+				List<String> list = new ArrayList<>();
 				list.add(reverse); list.add(word);
 				results.add(list);
 				wordSet.remove(word);

@@ -31,7 +31,7 @@ public class GenerateDoc {
 	
 		for(char c : document.toCharArray()) {
 			if(!map.containsKey(c) || map.get(c) == 0) return false;
-		//	map.put(c, map.get(c)-1);
+			map.put(c, map.get(c)-1);
 		}
 		return true;
 	}

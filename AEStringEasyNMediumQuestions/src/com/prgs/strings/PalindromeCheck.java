@@ -14,6 +14,7 @@ public class PalindromeCheck {
 		int size = charArray.length-1;
 		int counter = 0;
 		for(int i=0;i<size;i++) {
+			System.out.println(i +" "+ charArray[i] +" "+ charArray[size-i]);
 			if(charArray[i] != charArray[size-i] && size-i>0 ) {
 				counter++;
 			}
