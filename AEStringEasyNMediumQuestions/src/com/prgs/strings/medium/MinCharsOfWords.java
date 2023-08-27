@@ -16,17 +16,17 @@ public class MinCharsOfWords {
 	
 	public static char[] getMinCharsOfWords(String[] words) {
 		
-		Map<Character,Integer> map = new HashMap<>();
+		Map<Character,Integer> global = new HashMap<>();
 		StringBuilder sb = new StringBuilder();
 		for(String word : words) {
-			Map<Character,Integer> temp = new HashMap<>();
+			Map<Character,Integer> local = new HashMap<>();
 			for(Character c : word.toCharArray()) {
-				temp.put(c, temp.getOrDefault(c, 0)+1);
-				if(!map.containsKey(c)) {
-					map.put(c, map.getOrDefault(c, 0)+1);
+				local.put(c, local.getOrDefault(c, 0)+1);
+				if(!global.containsKey(c)) {
+					global.put(c, global.getOrDefault(c, 0)+1);
 					sb.append(c);
-				}else if(temp.get(c)>map.get(c)){
-					map.put(c, map.getOrDefault(c, 0)+1);
+				}else if(local.get(c)>global.get(c)){
+					global.put(c, global.getOrDefault(c, 0)+1);
 					sb.append(c);
 				}
 			}
