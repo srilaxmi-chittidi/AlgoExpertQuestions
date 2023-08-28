@@ -39,6 +39,7 @@ public class TournamentWinner {
 				currentBestTeam = winner;
 			}
 		}
+		scores.forEach((k,v)->System.out.println(k+" "+v));
 		
 		return currentBestTeam;
 	}
@@ -46,7 +47,7 @@ public class TournamentWinner {
 	public static void updatesScores(String winner , int points , Map<String , Integer> scores) {
 		
 		if(!scores.containsKey(winner)) {
-			scores.put(winner, points);
+			scores.put(winner, 0);
 		}
 		scores.put(winner, scores.get(winner)+points);
 	}
